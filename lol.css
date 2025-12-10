@@ -1,0 +1,73 @@
+/*
+=================================================================
+ CHRISTMAS CHUB BOT THEME
+ Theme for Lizzy and Erika characters on Chub.ai
+=================================================================
+*/
+
+/* 1. FONT IMPORTS */
+/* Using Cinzel for headers and Quicksand for body text */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Quicksand:wght@400;600&display=swap');
+
+
+/* 2. GLOBAL BUTTON OVERRIDE (The Fix) */
+/* This targets all Ant Design buttons across the page to apply the Christmas colors */
+
+/* Base style for ALL buttons on the page (primary, default, etc.) */
+button.ant-btn {
+    /* Christmas Red Background */
+    background-color: #c41e3a !important; 
+    
+    /* Gold Border */
+    border: 2px solid #FFD700 !important; 
+    
+    /* White/Cream Text */
+    color: #FFFFFF !important; 
+    
+    /* Apply Custom Fonts/Styles */
+    font-family: 'Cinzel', serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    
+    /* Smooth transition for animation */
+    transition: all 0.3s ease !important;
+}
+
+/* Hover effect for all buttons */
+button.ant-btn:hover {
+    /* Slightly brighter red on hover */
+    background-color: #ff4d6b !important; 
+    
+    /* Subtle Gold Glow on Hover */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7) !important;
+    
+    /* Lift the button slightly */
+    transform: translateY(-2px) !important;
+    border-color: #FFFF99 !important;
+}
+
+/* Fallback/Specific targets for Ant Design Primary Button */
+.ant-btn-primary {
+    background-color: #c41e3a !important;
+    border-color: #FFD700 !important;
+}
+.ant-btn-primary:hover {
+    background-color: #ff4d6b !important; 
+}
+
+
+/* 3. DESCRIPTION CARD STYLES (Used for the glow/hover effects in the HTML) */
+.chub-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chub-card:hover {
+    transform: translateY(-5px);
+    /* Make the glow stronger and brighter */
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.7) !important;
+    border-color: #fff !important;
+}
+
+/* Custom Fonts for Description Content */
+.fancy-font { font-family: 'Cinzel', serif; }
+.clean-font { font-family: 'Quicksand', sans-serif; }
