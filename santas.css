@@ -105,19 +105,33 @@ div.mt-4 { background: transparent !important; background-color: transparent !im
 /* ═══ DESKTOP (≥992px) ═══ */
 @media (min-width:992px) {
     .ant-row.ant-row-center>.ant-col-lg-6:first-child {
-        flex: 0 0 100% !important; max-width: var(--is-page-width) !important;
-        margin-left: auto !important; margin-right: auto !important;
-        display: grid !important; grid-template-columns: 1fr !important;
-        grid-template-rows: 1fr auto auto !important; align-items: end !important;
-        row-gap: 4px !important; overflow: visible !important;
-        position: relative !important; min-height: 340px !important;
-        padding: 0 16px 0 !important; margin-bottom: 80px !important;
+        flex: 0 0 100% !important; 
+        max-width: var(--is-page-width) !important;
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        display: grid !important; 
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr auto auto !important; 
+        align-items: end !important;
+        row-gap: 4px !important; 
+        overflow: visible !important;
+        position: relative !important; 
+        min-height: 340px !important;
+        padding: 0 16px 0 !important; 
+        margin-bottom: 80px !important;
+        
+        /* THE NEW SHAPE */
         border-radius: 0 !important;
         background: url('https://curie-assets.site/images/Vivi_headerTop.webp') center 40% / cover no-repeat !important;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%) !important;
+        
+        /* REPLACING BORDER WITH SHAPE-AWARE GLOW */
+        border: none !important;
+        filter: drop-shadow(0 0 8px var(--is-blue-glow)) !important;
         box-sizing: border-box !important;
-        border-style: solid !important; border-width: 2px !important;
-        border-color: var(--is-border-idle);
-        animation: is-borderPulse 4s ease-in-out infinite !important
+        animation: is-glowShift 4s ease-in-out infinite !important;
+    }
+}
     }
     .ant-row.ant-row-center>.ant-col-lg-6:first-child::before {
         content: '' !important; position: absolute !important; inset: 0 !important;
